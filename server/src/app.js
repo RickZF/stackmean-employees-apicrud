@@ -13,6 +13,6 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 //Routes
-//app.use("/api/employees", require("./routes/employeeRoutes"));
+app.use("/api/employees", require("./routes/employeeRoutes"));
 
 module.exports = app;
