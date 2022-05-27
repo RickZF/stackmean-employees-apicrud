@@ -1,4 +1,4 @@
-# stackmean-employees-crud
+# stackmean-employees-apicrud
 
 ![](docs/screenshot.png)
 ![](docs/screenshot2.png)
