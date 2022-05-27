@@ -71,6 +71,7 @@ export class EmployeesComponent implements OnInit {
     if(form){
       form.reset();
       this.selectedEmployee = new Employee();
+      this.getEmployees();
     }
   }
 

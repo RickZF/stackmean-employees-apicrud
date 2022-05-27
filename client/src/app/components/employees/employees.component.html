@@ -4,32 +4,32 @@
             <div class="card">
                 <div class="card-content">
                     <form #employeeForm="ngForm" (ngSubmit)="addEmployee(employeeForm)">
-                        <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="selectedEmployee._id">
+                        <input type="hidden" name="_id" [(ngModel)]="selectedEmployee._id">
                         <div class="row">
                             <div class="input-field col s12">
-                                <input type="text" name="name" #name="ngModel"
+                                <input type="text" name="name"
                                 [(ngModel)]="selectedEmployee.name"
                                 placeholder="Enter your Name">
                             </div>
                             <div class="input-field col s12">
-                                <input type="text" name="position" #position="ngModel"
+                                <input type="text" name="position" 
                                 [(ngModel)]="selectedEmployee.position"
                                 placeholder="Enter your Position">
                             </div>
                             <div class="input-field col s12">
-                                <input type="text" name="office" #office="ngModel"
+                                <input type="text" name="office" 
                                 [(ngModel)]="selectedEmployee.office"
                                 placeholder="Enter your Office">
                             </div>
                             <div class="input-field col s12">
-                                <input type="text" name="salary" #salary="ngModel"
+                                <input type="text" name="salary" 
                                 [(ngModel)]="selectedEmployee.salary"
                                 placeholder="Enter your Salary">
                             </div>
                             <div class="card-action">
                                 <div class="input-field col s12">
-                                    <button class="btn right">Save</button>
-                                    <button class="btn right" style="margin-right: 5px" (click)="resetForm(employeeForm)">Clean</button>
+                                    <button type="submit" class="btn right">Save</button>
+                                    <button type="button" class="btn right" style="margin-right: 5px" (click)="resetForm(employeeForm)">Clean</button>
                                 </div>
                             </div>
                         </div>
@@ -52,10 +52,10 @@
                         <td>{{employee.office}}</td>
                         <td>
                             <a (click)="editEmployee(employee)">
-                                <i class="material-icons">edit</i>
+                                <i class="material-icons" style="cursor: pointer; margin-right: 8px;">edit</i>
                             </a>
                             <a (click)="deleteEmployee(employee._id)">
-                                <i class="material-icons">delete</i>
+                                <i class="material-icons" style="cursor: pointer;">delete</i>
                             </a>
                         </td>
                     </tr>
